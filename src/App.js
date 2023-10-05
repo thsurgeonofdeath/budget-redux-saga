@@ -2,13 +2,13 @@
 /* eslint-disable no-redeclare */
 import { Container } from "semantic-ui-react";
 import "./App.css";
-import MainHeader from "./components/MainHeader";
-import DisplayBalance from "./components/DisplayBalance";
-import DisplayBalances from "./components/DisplayBalances";
-import NewEntryForm from "./components/NewEntryForm";
+import MainHeader from "./components/Header/MainHeader";
+import DisplayBalance from "./components/Entries/DisplayBalance";
+import DisplayBalances from "./components/Entries/DisplayBalances";
+import NewEntryForm from "./components/EntryForm/NewEntryForm";
 import { useEffect, useState } from "react";
-import EntryLines from "./components/EntryLines";
-import ModalEdit from "./components/ModalEdit";
+import EntryLines from "./components/Entries/EntryLines";
+import ModalEdit from "./components/EntryForm/ModalEdit";
 import { useSelector } from "react-redux";
 
 function App() {

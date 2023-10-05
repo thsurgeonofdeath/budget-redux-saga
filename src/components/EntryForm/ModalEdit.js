@@ -2,10 +2,8 @@ import React from "react";
 import { Button, Modal } from "semantic-ui-react";
 import EntryForm from "./EntryForm";
 import { useDispatch } from "react-redux";
-import { closeEditModal } from "../redux/actions/modals.actions";
-import useEntryDetails from "../hooks/useEntryDetails";
-
-// import EntryForm from "./EntryForm";
+import { closeEditModal } from "../../redux/actions/modals.actions";
+import useEntryDetails from "../../hooks/useEntryDetails";
 
 function ModalEdit({ isOpen, description, value, isExpense, id }) {
   const dispatch = useDispatch();

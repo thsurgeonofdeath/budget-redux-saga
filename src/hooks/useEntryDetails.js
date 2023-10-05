@@ -13,6 +13,12 @@ function useEntryDetails(desc = "", val = "", isExp = true) {
   const [isExpense, setIsExpense] = useState(isExp);
   const dispatch = useDispatch();
 
+  useEffect(() => {
+    setDescription(desc);
+    setValue(val);
+    setIsExpense(isExp);
+  }, [desc, val, isExp]);
+
   function updateEntry(id) {
     dispatch(
       updateEntryRedux(id, {
@@ -26,18 +32,6 @@ function useEntryDetails(desc = "", val = "", isExp = true) {
     resetValues();
   }
 
-  function resetValues() {
-    setDescription("");
-    setValue("");
-    setIsExpense(true);
-  }
-
-  useEffect(() => {
-    setDescription(desc);
-    setValue(val);
-    setIsExpense(isExp);
-  }, [desc, val, isExp]);
-
   function addEntry() {
     dispatch(
       addEntryRedux({
@@ -49,6 +43,13 @@ function useEntryDetails(desc = "", val = "", isExp = true) {
     );
     resetValues();
   }
+
+  function resetValues() {
+    setDescription("");
+    setValue("");
+    setIsExpense(true);
+  }
+
   return {
     description,
     setDescription,

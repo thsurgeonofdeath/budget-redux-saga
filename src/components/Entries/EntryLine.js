@@ -1,8 +1,8 @@
 import React, { Fragment } from "react";
 import { Grid, Icon, Segment } from "semantic-ui-react";
 import { useDispatch } from "react-redux";
-import { removeEntryRedux } from "../redux/actions/entries.actions";
-import { openEditModal } from "../redux/actions/modals.actions";
+import { removeEntryRedux } from "../../redux/actions/entries.actions";
+import { openEditModal } from "../../redux/actions/modals.actions";
 
 function EntryLine({ id, description, value, isExpense = false }) {
   const dispatch = useDispatch();
