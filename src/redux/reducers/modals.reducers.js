@@ -1,8 +1,10 @@
+import entriesTypes from "../actions/entriesTypes";
+
 export const reducer = (state = {}, action) => {
   switch (action.type) {
-    case "OPEN_EDIT_MODAL":
+    case entriesTypes.OPEN_EDIT_MODAL:
       return { ...state, isOpen: true, id: action.payload.id };
-    case "CLOSE_EDIT_MODAL":
+    case entriesTypes.CLOSE_EDIT_MODAL:
       return { ...state, isOpen: false, id: null };
     default:
       return state;

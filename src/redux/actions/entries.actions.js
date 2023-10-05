@@ -10,3 +10,15 @@ export const removeEntryRedux = (id) => {
 export const updateEntryRedux = (id, entry) => {
   return { type: entriesTypes.UPDATE_ENTRY, payload: { id, entry } };
 };
+
+export const getAllEntries = () => {
+  return { type: entriesTypes.GET_ENTRIES };
+};
+
+export const populateEntries = (entries) => {
+  return { type: entriesTypes.POPULATE_ENTRIES, payload: entries };
+};
+
+export const populateEntryDetails = (id, entry) => {
+  return { type: entriesTypes.POPULATE_ENTRY_DETAILS, payload: { id, entry } };
+};
