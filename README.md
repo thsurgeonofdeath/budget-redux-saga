@@ -1,8 +1,9 @@
 A simple React app that calculates the budget after inserting incomes and expenses
 
-Makes use of Semantic UI, Json-server, React Redux and Redux Saga
+Makes use of Semantic UI, JSON server, React Redux to handle state and Redux Saga to handle asynchronous functions
 
-To start the project, run the command `npm install` then adter installing all packages run `npm run start:all`
+To start the project, run the command `npm install`
+after all packages have been installed run `npm run start:all` to start the JSON server and run the app
 
 Screenshots of the application :
 
